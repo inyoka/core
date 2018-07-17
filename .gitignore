@@ -1,6 +1,8 @@
-#Django Wagtail 
+# Django Wagtail
+.gitignore.swp
 db.sqlite
 */migrations/
+media/
 
 
 # Byte-compiled / optimized / DLL files
@@ -107,4 +109,3 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-
