@@ -1,7 +1,6 @@
 # Django Wagtail
 .gitignore.swp
 db.sqlite
-*/migrations/
 media/
 
 
