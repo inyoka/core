@@ -2,9 +2,10 @@
 .gitignore.swp
 db.sqlite
 media/
-home/migrations/
-blog/migrations
 
+# Ignore all in migrations except __init__.py files.
+*/migrations/*
+!*/migrations/__init__.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
