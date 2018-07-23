@@ -1,6 +1,65 @@
 <style media="screen">
 
+body { padding: 0; background: pink;}
 
+flex-page {
+  display: flex;
+  min-height: 100vh;
+  flex-flow: column wrap;
+  font-weight: bold;
+  text-align: center;
+  /* min-height: 100vh; Uncomment for full height */
+}
+
+flex-page > * {
+  padding: 10px;
+
+}
+
+header {
+  background: red;
+}
+
+footer {
+  background: green;
+}
+
+main {
+  display: flex;
+    flex: 1 100%;
+  text-align: left;
+  flex-flow: column;
+  background: blue;
+  justify-content: space-between;
+}
+
+article{
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex: 4;
+}
+
+aside {
+  background: orange;
+  flex: 1;
+}
+
+
+
+@media all and (min-width: 800px) {
+  aside { flex: 1 auto; }
+  main { flex-direction: row; }
+}
+
+@media all and (min-width: 960px) {
+  header { order: 1; }
+  main    { order: 2; }
+  aside { order: 3; }
+  footer  { order: 4; }
+  column-right{ width:48% }
+  column-left{ width:48% }
+}
 
 
 
