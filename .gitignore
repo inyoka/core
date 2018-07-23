@@ -2,6 +2,8 @@
 .gitignore.swp
 db.sqlite
 media/
+home/migrations/
+blog/migrations
 
 
 # Byte-compiled / optimized / DLL files
