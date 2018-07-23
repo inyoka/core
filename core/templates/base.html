@@ -18,7 +18,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/core.css' %}">
+        {% include "_style.html" %}
+        <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/core.css' %}"> -->
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
