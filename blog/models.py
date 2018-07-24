@@ -13,4 +13,13 @@ class BlogIndexPage(Page):
         ('image', ImageChooserBlock(null=True, blank=True)),
     ], null=True, blank=True)
 
-    content_panels = Page.content_panels + [ StreamFieldPanel('intro') ]
+    aside = StreamField([
+        ('heading', blocks.CharBlock(classname="full title", null=True, blank=True)),
+        ('paragraph', blocks.RichTextBlock(null=True, blank=True)),
+        ('image', ImageChooserBlock(null=True, blank=True)),
+    ], null=True, blank=True)
+
+    content_panels = Page.content_panels + [
+        StreamFieldPanel('intro'),
+        StreamFieldPanel('aside')
+    ]
