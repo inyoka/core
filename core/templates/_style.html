@@ -1,5 +1,9 @@
 <style media="screen">
 
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 body { padding: 0; background: pink;}
 
 flex-page {
@@ -13,20 +17,15 @@ flex-page {
 
 flex-page > * {
   padding: 10px;
-
 }
 
 header {
   background: red;
 }
 
-footer {
-  background: green;
-}
-
 main {
   display: flex;
-    flex: 1 100%;
+  flex: 1 100%;
   text-align: left;
   flex-flow: column;
   background: blue;
@@ -37,19 +36,27 @@ article{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  flex: 4;
+  flex-grow:  4;
 }
 
 aside {
   background: orange;
-  flex: 1;
+  flex-grow: 1;
+  height: 100px;
+  width: 100%;
 }
+ aside-contents{
+   margin: auto;
+ }
 
-
+ footer {
+   background: green;
+ }
 
 @media all and (min-width: 800px) {
   aside { flex: 1 auto; }
   main { flex-direction: row; }
+  aside{ width: 20%; }
 }
 
 @media all and (min-width: 960px) {
@@ -60,8 +67,6 @@ aside {
   column-right{ width:48% }
   column-left{ width:48% }
 }
-
-
 
 /* Streamfield contents */
   .block-heading{
