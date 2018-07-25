@@ -20,8 +20,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
+        <link href="https://fonts.googleapis.com/css?family=Baloo|Source+Sans+Pro" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         {% include "_style.html" %}
         <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/core.css' %}"> -->
 
@@ -40,22 +40,20 @@
         {% wagtailuserbar %}
         {% load wagtailcore_tags %}
 
-        <flex-page class="container">
+        <flex-page>
           <header>
             {% include "_header.html" %}
-            <nav>
-              {% include "_nav.html" %}
-            </nav>
           </header>
+
+          {% include "_nav.html" %}
+
 
           <main>
             <article>
               {% block content %}{% endblock %}
             </article>
             <aside>
-              <div class="aside-contents">
-                {{ page.aside }}
-              </div>
+              {% block aside %}{% endblock %}
             </aside>
           </main>
 
