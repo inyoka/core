@@ -26,11 +26,6 @@ class BlogIndexPage(Page):
         StreamFieldPanel('aside')
     ]
 
-    # def get_context(self, request):
-    #     context = super(BlogIndexPage, self).get_context(request)
-    #     context['blog_index'] = BlogIndexPage.objects.first()
-    #     return context
-
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
