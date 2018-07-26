@@ -21,13 +21,15 @@
 
         {# Global stylesheets #}
         <link href="https://fonts.googleapis.com/css?family=Baloo|Source+Sans+Pro" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        {% include "_style.html" %}
-        <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/core.css' %}"> -->
 
-        <!-- {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
-        {% endblock %} -->
+
+
+        {% block extra_css %}
+          {% include "_style_bootstrap.html" %}
+          {% include "_style.html" %}
+        {% endblock %}
+
+
         <link rel="icon" href="{% static "images/logo.ico" %}">
         <meta name="description" content="{{ page_desc }}">
         <meta property="og:title" content="{{ page_title }}">
