@@ -17,8 +17,17 @@
       <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link disabled" href="#">Features</a>
       <a class="nav-item nav-link disabled" href="#">Pricing</a>
-      <a class="nav-item nav-link" href="{% url 'wagtailadmin_home' %}">Wagtail CMS</a>
-      <a class="nav-item nav-link" href="/django-admin/">Django Admin <span class="sr-only"></span></a>
+
+      <div class="nav-item dropdown">
+          <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wagtail</div>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://docs.wagtail.io/">Documentation</a>
+          <a class="dropdown-item" href="{% url 'wagtailadmin_home' %}">Content Management</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/django-admin/">Django Admin <span class="sr-only"></span></a>
+        </div>
+      </div>
+
       <a class="nav-item nav-link" href="/blog/">Blog</a>
     </div>
   </div>
