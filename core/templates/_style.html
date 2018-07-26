@@ -1,3 +1,6 @@
+{% block extra_css %}
+
+
 <style media="screen">
 
 *{
@@ -8,11 +11,11 @@ body {
   display:flex;
   justify-content: center;
   padding: 0;
-  background: darkblue;
-  background-image: url("/static/images/background.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: lightgrey;
+  fill-opacity: 0.5;
+  stroke-opacity: 0.5;
+  stroke: yellow;
+  {% include "patterns/_topography.html" %}
 }
 #background{
   fill: green;
@@ -39,7 +42,9 @@ header, footer {
 }
 
 header {
-  background: pink;
+  background: darkblue;
+  background-color: white;
+  {% include "patterns/_graph_paper.html" %}
 }
 .heading{
   font-family: 'Baloo', cursive;
@@ -73,10 +78,16 @@ aside {
   padding: 10px;
   border-radius: 15px;
   flex-basis: 1;
+  {% include "patterns/_lips.html" %}
+}
+
+.block-heading {
 }
 
  footer {
-   background: pink;
+   fill: darkblue;
+   background-color: white;
+   {% include "patterns/_brick_wall.html" %}
  }
 
 @media all and (min-width: 800px) {
@@ -113,3 +124,5 @@ aside {
   }
 
 </style>
+
+{% endblock %}
