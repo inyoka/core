@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+    {% include "_bootstrap_style.html" %}
+{% endblock %}
+
+{% block content %}
+
+    {{ page.body }}
+
+{% endblock %}
+
+{% block aside %}
+
+    {{ page.aside}}
+
+{% endblock %}
