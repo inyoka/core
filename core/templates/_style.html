@@ -39,18 +39,27 @@ header, footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 header {
   background: darkblue;
   background-color: white;
   {% include "patterns/_graph_paper.html" %}
+  margin-top: 10px;
+  height: 150px;
 }
+
 .heading{
   font-family: 'Baloo', cursive;
   font-weight: 800;
   font-style:oblique;
   font-size: 2.5em;
+}
+
+.navbar{
+    margin: 10px 0px 10px 0px;
+    padding: 10px 20px;
 }
 
 main {
@@ -73,22 +82,21 @@ article{
 }
 
 aside {
-  background: wheat;
+  {% include "patterns/_diagonal_lines.html" %}
+  color: wheat;
   height: 100%;
   padding: 10px;
   border-radius: 15px;
   flex-basis: 1;
-  {% include "patterns/_lips.html" %}
-}
-
-.block-heading {
 }
 
  footer {
    fill: darkblue;
    background-color: white;
-   {% include "patterns/_brick_wall.html" %}
- }
+   margin-top: 10px;
+   {% include "patterns/_graph_paper.html" %}
+   height: 80px;
+}
 
 @media all and (min-width: 800px) {
   main { flex-direction: row; }
