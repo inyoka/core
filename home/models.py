@@ -30,7 +30,7 @@ class HomePage(Page):
 
 
 class ContactPage(Page):
-    page_content = StreamField([
+    body = StreamField([
         ('heading', blocks.CharBlock(classname="full title",icon="title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock(icon="image")),
@@ -38,3 +38,11 @@ class ContactPage(Page):
         ('embedded_video', EmbedBlock(icon="media")),
         ('google_map', GoogleMapBlock()),
     ],null=True,blank=True)
+
+    aside = StreamField([
+        ('heading', blocks.CharBlock(classname="full title", null=True, blank=True)),
+        ('paragraph', blocks.RichTextBlock(null=True, blank=True)),
+        ('image', ImageChooserBlock(null=True, blank=True)),
+    ], null=True, blank=True)
+
+    content_panels = Page.content_panels + [ StreamFieldPanel('body'), StreamFieldPanel('aside') ]
