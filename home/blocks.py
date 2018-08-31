@@ -17,7 +17,7 @@ class GoogleMapBlock(blocks.StructBlock):
     map_zoom_level = blocks.CharBlock(default=14,required=True,max_length=3)
 
     class Meta:
-        template = 'yourapp/blocks/google_map.html'
+        template = 'blocks/google_map.html'
         icon = 'cogs'
         label = 'Google Map'
 
