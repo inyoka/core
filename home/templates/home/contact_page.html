@@ -7,16 +7,47 @@
 {% block extra_css %}
     {% include "_style_bootstrap.html" %}
     {% include "_style_contact.html" %}
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
+{% block body %}
+<flex-page>
+  <main>
+    <article>
+      {% block content %}
+      <br>
+      <button type="button" name="button" class="btn">Navigate to School <i class="fas fa-map-marker-alt fa-1x"></i></button>
+      <br>
+      {{ page.body }}
+      <br>
+      <iframe class="img-thumbnail" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.788015720234!2d98.70464181463524!3d3.6357996973543942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303133cb86bccbe3%3A0x74aa644c1519ba8b!2sChandra+Kumala+School!5e0!3m2!1sen!2sde!4v1535424271040" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-    {{ page.body }}
+      <br>
+      <br>
 
-{% endblock %}
 
-{% block aside %}
+      <div class="fa-4x">
+        <i class="fas fa-phone" data-fa-transform="shrink-8 down-.25 right-.25" data-fa-mask="fas fa-circle"></i>
+        <i class="fas fa-pencil-alt" data-fa-transform="shrink-10 up-.5" data-fa-mask="fas fa-circle"></i>
+        <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
+        <i class="fab fa-twitter fa-inverse" data-fa-transform="shrink-6 down-.25 right-.25" data-fa-mask="fas fa-circle"></i>
+        <i class="fab fa-youtube fa-inverse" data-fa-transform="shrink-6.5" data-fa-mask="fas fa-circle"></i>
+      </div>
 
-    {{ page.aside}}
+      <form action="http://google.com">
+          <button onclick="location.href='/'" type="button" name="button" class="btn" href="/"><i class="fas fa-home fa-3x"></i></i></button>
+          <br>
+      </form>
 
+      {% endblock %}
+
+    </article>
+    <aside>
+      {% block aside %}{{ page.aside }}{% endblock %}
+    </aside>
+  </main>
+
+
+
+</flex-page>
 {% endblock %}
